@@ -32,19 +32,19 @@ public class TestLeaderSituation {
     FailInvocation messager2Fail = null;
     @Before
     public void prepared() throws Exception {
-        Messager messager0_ori = new Messager("0");
+        Messenger messager0_ori = new Messenger("0");
         messager0Fail = new FailInvocation(new FailHook(), messager0_ori);
         PracticalMessenger messager0 = (PracticalMessenger) Proxy.newProxyInstance(messager0_ori.getClass()
             .getClassLoader(), messager0_ori.getClass().getInterfaces(), messager0Fail);
 
        
-        Messager messager1_ori = new Messager("1");
+        Messenger messager1_ori = new Messenger("1");
         messager1Fail = new FailInvocation(new FailHook(), messager1_ori);
         PracticalMessenger messager1 = (PracticalMessenger) Proxy.newProxyInstance(messager1_ori.getClass()
             .getClassLoader(), messager1_ori.getClass().getInterfaces(), messager1Fail);
 
         
-        Messager messager2_ori = new Messager("2");
+        Messenger messager2_ori = new Messenger("2");
         messager2Fail = new FailInvocation(new FailHook(), messager2_ori);
         PracticalMessenger messager2 = (PracticalMessenger) Proxy.newProxyInstance(messager2_ori.getClass()
             .getClassLoader(), messager2_ori.getClass().getInterfaces(), messager2Fail);

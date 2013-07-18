@@ -7,11 +7,11 @@ import cocagne.paxos.practical.PracticalNode;
 public class Play {
     public static void main(String[] args) {
 //        //Æô¶¯proposer
-        Messager messager0 = new Messager("0");
+        Messenger messager0 = new Messenger("0");
 
-        Messager messager1 = new Messager("1");
+        Messenger messager1 = new Messenger("1");
         
-        Messager messager2 = new Messager("2");
+        Messenger messager2 = new Messenger("2");
         
         PracticalNode node0 = new PracticalNode(messager0, "0", 2);
         
